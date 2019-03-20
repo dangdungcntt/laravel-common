@@ -1,0 +1,47 @@
+{
+    "name": "nddcoder/common",
+    "description": "Common for pushtimize",
+    "keywords": [
+        "nddcoder",
+        "common"
+    ],
+    "homepage": "https://github.com/pushtimize/common",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dang Dung",
+            "email": "dungnd@eway.vn",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/container": "5.7.*",
+        "illuminate/support": "5.7.*",
+        "illuminate/log": "5.7.*",
+        "nddcoder/laravel-http-client": "^1.0",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nddcoder\\Common\\": "src"
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pushtimize\\Common\\CommonServiceProvider"
+            ]
+        }
+    }
+}
