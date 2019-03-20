@@ -6,7 +6,7 @@
  * Time: 10:46
  */
 
-use Pushtimze\Common\Helpers\AesCBCHelper;
+use Nddcoder\Common\Helpers\AesCBCHelper;
 
 if (! function_exists('gravatar_url')) {
     function gravatar_url($email)

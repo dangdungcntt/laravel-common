@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushtimze\Common\Providers;
+namespace Nddcoder\Common\Providers;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;

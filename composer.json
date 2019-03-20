@@ -1,17 +1,18 @@
 {
-    "name": "nddcoder/common",
-    "description": "Common for pushtimize",
+    "name": "nddcoder/laravel-common",
+    "description": "Common for laravel application",
     "keywords": [
         "nddcoder",
-        "common"
+        "common",
+        "laravel"
     ],
-    "homepage": "https://github.com/pushtimize/common",
+    "homepage": "https://github.com/dangdungcntt/laravel-common",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
             "name": "Dang Dung",
-            "email": "dungnd@eway.vn",
+            "email": "dangdungcntt@gmail.vn",
             "role": "Developer"
         }
     ],
@@ -40,7 +41,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Pushtimize\\Common\\CommonServiceProvider"
+                "Nddcoder\\Common\\CommonServiceProvider"
             ]
         }
     }

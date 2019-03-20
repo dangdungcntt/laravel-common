@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushtimize\Common\Tests;
+namespace Nddcoder\Common\Tests;
 
 use PHPUnit\Framework\TestCase;
 

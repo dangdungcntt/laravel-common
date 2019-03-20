@@ -6,7 +6,7 @@
  * Time: 00:20
  */
 
-namespace Pushtimize\Common\Logging;
+namespace Nddcoder\Common\Logging;
 
 use Illuminate\Log\Logger;
 use Illuminate\Support\Facades\Log;

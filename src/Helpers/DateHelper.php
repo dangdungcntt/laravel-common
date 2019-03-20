@@ -6,7 +6,7 @@
  * Time: 14:22
  */
 
-namespace Pushtimze\Common\Helpers;
+namespace Nddcoder\Common\Helpers;
 
 use Illuminate\Support\Carbon;
 

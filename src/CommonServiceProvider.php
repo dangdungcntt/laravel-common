@@ -1,12 +1,11 @@
 <?php
 
-namespace Pushtimize\Common;
+namespace Nddcoder\Common;
 
-use Illuminate\Container\Container;
 use Illuminate\Log\Logger;
 use Illuminate\Support\ServiceProvider;
-use Pushtimize\Common\Logging\FileAndDebugbarLog;
-use Pushtimze\Common\Providers\CollectionServiceProvider;
+use Nddcoder\Common\Logging\FileAndDebugbarLog;
+use Nddcoder\Common\Providers\CollectionServiceProvider;
 
 class CommonServiceProvider extends ServiceProvider
 {
@@ -18,7 +17,7 @@ class CommonServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => Container::getInstance()->make('common.php'),
+                __DIR__.'/../config/config.php' => config_path('laravel-common.php'),
             ], 'config');
         }
 
@@ -32,6 +31,6 @@ class CommonServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'common');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-common');
     }
 }

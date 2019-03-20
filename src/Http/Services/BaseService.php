@@ -6,7 +6,7 @@
  * Time: 14:58
  */
 
-namespace Pushtimze\Common\Http\Services;
+namespace Nddcoder\Common\Http\Services;
 
 use Illuminate\Container\Container;
 use Illuminate\Log\Logger;
