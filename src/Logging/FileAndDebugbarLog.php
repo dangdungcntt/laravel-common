@@ -25,7 +25,7 @@ class FileAndDebugbarLog extends Logger
         }
 
         Log::{$level}($message, $context);
-        if (function_exists('debugbar') && method_exists(debugbar(), $level)) {
+        if (function_exists('debugbar')) {
             debugbar()->{$level}($message, $context);
         }
         return true;
