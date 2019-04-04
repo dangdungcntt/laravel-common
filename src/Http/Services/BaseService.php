@@ -56,21 +56,26 @@ abstract class BaseService
         return $this->httpClient->request($method, $url, $options);
     }
 
-    protected function handleResponse($response, $dataKey, $logMessage = '')
+    protected function handleResponse($response, $dataKey, $logMessage = '', $errorDetailsKey = 'bodyJSON.details')
     {
+        $statusCode = data_get($response, 'status_code');
         //Max status code success is 226 IM Used, so 250 is enough to validate success
-        if (data_get($response, 'status_code') < 200 || data_get($response, 'status_code') >= 250) {
+        if ($statusCode < 200 || $statusCode >= 250) {
             $errorCode = time();
             $this->logger->debug("[Error code: $errorCode] {$logMessage}", [
                 'response' => $response
             ]);
 
             return [
+                'status_code' => $statusCode,
                 'error_code' => $errorCode,
+                'error_details' => data_get($response, $errorDetailsKey)
             ];
         }
 
         return [
+            'status_code' => $statusCode,
+            'headers' => data_get($response, 'headers'),
             'data' => data_get($response, $dataKey)
         ];
     }
