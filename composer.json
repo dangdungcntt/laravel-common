@@ -21,7 +21,7 @@
         "illuminate/container": "5.7.*",
         "illuminate/support": "5.7.*",
         "illuminate/log": "5.7.*",
-        "nddcoder/laravel-http-client": "^1.0",
+        "nddcoder/laravel-http-client": "^1.1",
         "ext-openssl": "*"
     },
     "require-dev": {
